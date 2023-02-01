@@ -27,8 +27,8 @@
   ;
   ; @usage
   ; (create-config-file! "my-config.edn" {:body     {...}
-  ;                                       :filepath "my-config.edn"
-  ;                                       :header   "My header\n..."})
+  ;                                       :header   "My header\n..."
+  ;                                       :filepath "my-config.edn"})
   ;
   ; @return (boolean)
   [config-id {:keys [body filepath header]}]

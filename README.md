@@ -43,7 +43,7 @@ The [`config-handler.api/create-config-file!`](documentation/clj/config-handler/
 function creates and EDN file onto the given filepath (only if it does not exist),
 and when creating, writes the body and/or the header into the created file.
 
-> In case of the file exists it doesn't change it anymore.
+> In case of the file exists it doesn't change it anymore!
 
 ```
 (create-config-file! :my-config {:body     {:my-item "My value"}
@@ -52,8 +52,8 @@ and when creating, writes the body and/or the header into the created file.
 
 ```
 (create-config-file! :my-config {:body     {:my-item "My value"}
-                                 :filepath "my-file.edn"
-                                 :header   "My header\n..."})
+                                 :header   "My header\n..."
+                                 :filepath "my-file.edn"})
 ```
 
 ### How to import a config file?
