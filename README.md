@@ -25,6 +25,8 @@ The <strong>clj-config-handler</strong> functional documentation is [available h
 
 You can track the changes of the <strong>clj-config-handler</strong> library [here](CHANGES.md).
 
+# Usage
+
 ### Index
 
 - [How to create a config file?](#how-to-create-a-config-file)
@@ -34,8 +36,6 @@ You can track the changes of the <strong>clj-config-handler</strong> library [he
 - [How to get an imported config file's content?](#how-to-get-an-imported-config-files-content)
 
 - [How to get an item from an imported config file?](#how-to-get-an-item-from-an-imported-config-file)
-
-# Usage
 
 ### How to create a config file?
 
