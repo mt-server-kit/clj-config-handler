@@ -1,5 +1,5 @@
 
-(ns config-handler.env
+(ns config-handler.side-effects
     (:require [config-handler.state :as state]
               [io.api               :as io]
               [noop.api             :refer [return]]))
