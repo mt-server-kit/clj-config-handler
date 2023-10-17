@@ -3,8 +3,8 @@
 
 ### Overview
 
-The <strong>clj-config-handler</strong> is a simple EDN based config file handler
-for Clojure projects.
+The <strong>clj-config-handler</strong> is a simple EDN config file handler for
+Clojure projects.
 
 ### deps.edn
 
