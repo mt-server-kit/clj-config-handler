@@ -57,7 +57,7 @@ and writing went well.
   (if-not (io/file-exists? filepath)
           (and (if body   (io/write-edn-file!   filepath body   {:create? true}) :no-body-passed)
                (if header (io/write-edn-header! filepath header {:create? true}) :no-header-passed))
-          (return :config-file-already-exists)))
+          (-> :config-file-already-exists)))
 ```
 
 </details>
