@@ -1,5 +1,9 @@
 
-# config-handler.api Clojure namespace
+### config-handler.api
+
+Functional documentation of the config-handler.api Clojure namespace
+
+---
 
 ##### [README](../../../README.md) > [DOCUMENTATION](../../COVER.md) > config-handler.api
 
@@ -12,6 +16,8 @@
 - [get-config-item](#get-config-item)
 
 - [import-config-file!](#import-config-file)
+
+---
 
 ### create-config-file!
 
@@ -227,5 +233,5 @@ use for read the imported config by using the 'get-config-item' function.
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 
