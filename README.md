@@ -27,6 +27,9 @@ You can track the changes of the <strong>clj-config-handler</strong> library [he
 
 # Usage
 
+> Some parameters of the following functions and some further functions are not discussed in this file.
+  To learn more about the available functionality, check out the [functional documentation](documentation/COVER.md)!
+
 ### Index
 
 - [How to create a config file?](#how-to-create-a-config-file)
