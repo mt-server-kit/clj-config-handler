@@ -46,7 +46,7 @@ The [`config-handler.api/create-config-file!`](documentation/clj/config-handler/
 function creates and EDN file onto the given filepath (only if it does not exist),
 and when creating, writes the body and/or the header into the created file.
 
-> In case of the file exists it doesn't change it anymore!
+> In case the file exists the function doesn't change it anymore!
 
 ```
 (create-config-file! :my-config {:body     {:my-item "My value"}
