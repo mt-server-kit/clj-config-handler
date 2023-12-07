@@ -6,10 +6,10 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; config-handler.env
+; @redirect (config-handler.env)
 (def get-config-content env/get-config-content)
 (def get-config-item    env/get-config-item)
 
-; config-handler.side-effects
+; @redirect (config-handler.side-effects)
 (def create-config-file! side-effects/create-config-file!)
 (def import-config-file! side-effects/import-config-file!)
