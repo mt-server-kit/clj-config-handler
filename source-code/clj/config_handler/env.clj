@@ -6,7 +6,7 @@
 ;; ----------------------------------------------------------------------------
 
 (defn get-config-content
-  ; @warning
+  ; @important
   ; Before using this function, the config file must be imported with the same
   ; config ID and by using the 'import-config-file!' function.
   ;
@@ -24,7 +24,7 @@
       (throw (Exception. (str "No config file imported with the given ID:" config-id)))))
 
 (defn get-config-item
-  ; @warning
+  ; @important
   ; Before using this function, the config file must be imported with the same
   ; config ID and by using the 'import-config-file!' function.
   ;
