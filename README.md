@@ -10,7 +10,7 @@ Clojure projects.
 
 ```
 {:deps {bithandshake/clj-config-handler {:git/url "https://github.com/bithandshake/clj-config-handler"
-                                         :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
+                                         :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
 ```
 
 ### Current version
@@ -62,7 +62,7 @@ and when creating, writes the body and/or the header into the created file.
 ### How to import a config file?
 
 The [`config-handler.api/import-config-file!`](documentation/clj/config-handler/API.md#create-config-file)
-function reads the EDN file stored on the given filepath and stores its content
+function reads the EDN file stored at the given filepath and stores its content
 in the config handler state identified by the given config ID, that you can
 use for read the imported config by using the 'get-config-item' function.
 

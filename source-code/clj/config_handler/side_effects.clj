@@ -8,7 +8,7 @@
 
 (defn create-config-file!
   ; @description
-  ; Creates and EDN config file on the given filepath (only if it does not exist),
+  ; Creates and EDN config file at the given filepath (only if it does not exist),
   ; and when creating, writes the body and/or the header into the created file.
   ;
   ; The return value can be evaluted as boolean and indicates whether the creating
@@ -41,7 +41,7 @@
 
 (defn import-config-file!
   ; @description
-  ; Reads the EDN file stored on the given filepath and stores its content in
+  ; Reads the EDN file stored at the given filepath and stores its content in
   ; the config handler state identified by the given config ID, that you can
   ; use for read the imported config by using the 'get-config-item' function.
   ;
