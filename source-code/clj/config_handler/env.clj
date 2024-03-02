@@ -23,7 +23,7 @@
 
 (defn get-config-value
   ; @description
-  ; Returns a value from the imported content of a specific config file.
+  ; Returns a specific value from the imported content of a specific config file.
   ;
   ; @param (keyword) config-id
   ; @param (*) value-key
