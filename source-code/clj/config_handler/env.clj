@@ -8,7 +8,7 @@
 (defn get-config-content
   ; @important
   ; Before using this function, the config file must be imported with the same
-  ; config ID and by using the 'import-config-file!' function.
+  ; config ID by the 'import-config-file!' function.
   ;
   ; @description
   ; Returns the content of an imported config file.
@@ -21,7 +21,7 @@
   ; @return (*)
   [config-id]
   (or (get state/IMPORTED-CONFIG-FILES config-id)
-      (throw (Exception. (str "No config file imported with the given ID:" config-id)))))
+      (throw (Exception. (str "No config file is imported with the given ID:" config-id)))))
 
 (defn get-config-item
   ; @important
