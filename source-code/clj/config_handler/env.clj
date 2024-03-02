@@ -6,38 +6,34 @@
 ;; ----------------------------------------------------------------------------
 
 (defn get-config-content
-  ; @important
-  ; Before using this function, the config file must be imported with the same
-  ; config ID by the 'import-config-file!' function.
-  ;
   ; @description
-  ; Returns the content of an imported config file.
+  ; Returns the imported content of a specific config file.
   ;
   ; @param (keyword) config-id
   ;
   ; @usage
-  ; (get-config-item :my-config)
+  ; (get-config-content :my-config)
+  ; =>
+  ; {:my-value "My value"}
   ;
   ; @return (*)
   [config-id]
   (or (get state/IMPORTED-CONFIG-FILES config-id)
       (throw (Exception. (str "No config file is imported with the given ID:" config-id)))))
 
-(defn get-config-item
-  ; @important
-  ; Before using this function, the config file must be imported with the same
-  ; config ID and by using the 'import-config-file!' function.
-  ;
+(defn get-config-value
   ; @description
-  ; Returns a value read by the given item-key from an imported config file.
+  ; Returns a value from the imported content of a specific config file.
   ;
   ; @param (keyword) config-id
-  ; @param (*) item-key
+  ; @param (*) value-key
   ;
   ; @usage
-  ; (get-config-item :my-config :my-key)
+  ; (get-config-value :my-config :my-value)
+  ; =>
+  ; "My value"
   ;
   ; @return (*)
-  [config-id item-key]
-  (if-let [config (get-config-content config-id)]
-          (get config item-key)))
+  [config-id value-key]
+  (if-let [config-content (get-config-content config-id)]
+          (get config-content value-key)))
