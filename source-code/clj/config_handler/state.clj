@@ -10,5 +10,5 @@
 ; @usage
 ; (deref IMPORTED-CONFIG-FILES)
 ; =>
-; {:my-config {:my-value "My value"}}
+; {:my-config {:my-key "My value"}}
 (def IMPORTED-CONFIG-FILES (atom {}))

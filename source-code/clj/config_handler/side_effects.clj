@@ -18,7 +18,7 @@
   ; @usage
   ; (import-config-file! :my-config {:filepath "my-config.edn"})
   ; =>
-  ; {:my-value "My value"}
+  ; {:my-key "My value"}
   ;
   ; @return (*)
   [config-id {:keys [filepath]}]
@@ -42,17 +42,17 @@
   ;  :header (string)(opt)}
   ;
   ; @usage
-  ; (create-config-file! :my-config {:body     {:my-value "My value"}
+  ; (create-config-file! :my-config {:body     {:my-key "My value"}
   ;                                  :filepath "my-config.edn"})
   ; =>
-  ; {:my-value "My value"}
+  ; {:my-key "My value"}
   ;
   ; @usage
-  ; (create-config-file! :my-config {:body     {:my-value "My value"}
+  ; (create-config-file! :my-config {:body     {:my-key "My value"}
   ;                                  :header   "My header"
   ;                                  :filepath "my-config.edn"})
   ; =>
-  ; {:my-value "My value"}
+  ; {:my-key "My value"}
   ;
   ; @return (boolean)
   [config-id {:keys [body filepath header] :as options}]

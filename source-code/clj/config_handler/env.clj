@@ -14,7 +14,7 @@
   ; @usage
   ; (get-config-content :my-config)
   ; =>
-  ; {:my-value "My value"}
+  ; {:my-key "My value"}
   ;
   ; @return (*)
   [config-id]
@@ -29,7 +29,7 @@
   ; @param (*) value-key
   ;
   ; @usage
-  ; (get-config-value :my-config :my-value)
+  ; (get-config-value :my-config :my-key)
   ; =>
   ; "My value"
   ;
