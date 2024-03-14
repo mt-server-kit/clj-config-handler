@@ -16,10 +16,10 @@ The <strong>clj-config-handler</strong> is a simple EDN config file handler for 
 
 Check out the latest commit on the [release branch](https://github.com/mt-server-kit/clj-config-handler/tree/release).
 
-### Documentation
-
-The <strong>clj-config-handler</strong> functional documentation is [available here](https://mt-server-kit.github.io/clj-config-handler).
-
 ### Changelog
 
 You can track the changes of the <strong>clj-config-handler</strong> library [here](CHANGES.md).
+
+# Documentation
+
+The <strong>clj-config-handler</strong> functional documentation is [available here](https://mt-server-kit.github.io/clj-config-handler).
