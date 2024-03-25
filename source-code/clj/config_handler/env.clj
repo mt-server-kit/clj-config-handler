@@ -1,39 +1,39 @@
 
 (ns config-handler.env
-    (:require [config-handler.state :as state]))
+    (:require [io.api :as io]
+              [config-handler.utils :as utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn get-config-content
-  ; @description
-  ; Returns the imported content of a specific config file.
+(defn read-config
+  ; @ignore
   ;
   ; @param (keyword) config-id
   ;
+  ; @return (*)
+  [config-id]
+  (or (->> config-id utils/config-id->filepath io/read-edn-file)
+      (->> config-id (str "Config file not found or empty: ") Exception. throw)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn get-config
+  ; @description
+  ; - Returns the content of a specific EDN config file optionally filtered to a nested value.
+  ; - Throws an error if the configuration file is not found or empty.
+  ;
+  ; @param (keyword) config-id
+  ; @param (list of *)(opt) keys
+  ;
   ; @usage
-  ; (get-config-content :my-config)
+  ; ;; ':my-directory/my-config' -> 'environment/my-directory/my-config.edn'
+  ; (get-config :my-directory/my-config)
   ; =>
   ; {:my-key "My value"}
   ;
   ; @return (*)
-  [config-id]
-  (or (get state/IMPORTED-CONFIG-FILES config-id)
-      (throw (Exception. (str "No config file is imported with the given ID:" config-id)))))
-
-(defn get-config-value
-  ; @description
-  ; Returns a specific value from the imported content of a specific config file.
-  ;
-  ; @param (keyword) config-id
-  ; @param (*) value-key
-  ;
-  ; @usage
-  ; (get-config-value :my-config :my-key)
-  ; =>
-  ; "My value"
-  ;
-  ; @return (*)
-  [config-id value-key]
-  (if-let [config-content (get-config-content config-id)]
-          (get config-content value-key)))
+  [config-id & keys]
+  (if keys (-> config-id read-config (get-in keys))
+           (-> config-id read-config)))
