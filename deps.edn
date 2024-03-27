@@ -1,5 +1,5 @@
 
 {:paths ["source-code/clj"]
  :deps  {mt-utilities/cljc-io {:git/url "https://github.com/mt-utilities/cljc-io"
-                               :sha     "7e676bb536e70feeb123917b610ad6409fe6fa53"}
+                               :sha     "e5cbb451841acffac5d278e98b7952679064dd11"}
          org.clojure/clojure  {:mvn/version "1.10.1"}}}
