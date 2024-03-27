@@ -1,7 +1,7 @@
 
 (ns config-handler.env
-    (:require [io.api :as io]
-              [config-handler.utils :as utils]))
+    (:require [config-handler.utils :as utils]
+              [io.api               :as io]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
